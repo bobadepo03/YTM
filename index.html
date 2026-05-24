@@ -2,18 +2,22 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>MusicTube</title>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
+
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   />
 </head>
+
 <body>
 
   <div class="sidebar">
+
     <h1 class="logo">MusicTube</h1>
 
     <div class="menu">
@@ -21,11 +25,13 @@
       <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
       <a href="#"><i class="fa-solid fa-heart"></i> Favorite</a>
     </div>
+
   </div>
 
   <div class="main">
 
     <div class="topbar">
+
       <input
         type="text"
         id="searchInput"
@@ -35,6 +41,7 @@
       <button id="searchBtn">
         <i class="fa-solid fa-search"></i>
       </button>
+
     </div>
 
     <div class="hero">
@@ -46,28 +53,38 @@
 
   </div>
 
+  <!-- PLAYER -->
+
   <div class="player">
+
     <iframe
       id="playerFrame"
       src=""
       frameborder="0"
-      allow="autoplay; encrypted-media"
+      allow="autoplay"
       allowfullscreen
     ></iframe>
-  </div>
-  <div class="mini-player" id="miniPlayer">
-  <img id="miniThumb" src="" />
 
-  <div class="mini-info">
-    <h4 id="miniTitle">Tidak ada lagu</h4>
-    <p id="miniArtist">-</p>
   </div>
+
+  <!-- MINI PLAYER -->
+
+  <div class="mini-player">
+
+    <img id="miniThumb" src="" />
+
+    <div class="mini-info">
+      <h4 id="miniTitle">Tidak ada lagu</h4>
+      <p id="miniArtist">-</p>
+    </div>
 
     <button id="playBtn">
       <i class="fa-solid fa-play"></i>
     </button>
+
   </div>
-  
+
   <script src="script.js"></script>
+
 </body>
 </html>
