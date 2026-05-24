@@ -76,6 +76,7 @@ searchBtn.addEventListener("click", () => {
   const query = searchInput.value.trim();
 
   if (query !== "") {
+    saveHistory(query);
     searchMusic(query);
   }
 });
