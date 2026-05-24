@@ -314,4 +314,137 @@ body{
   .hero h2{
     font-size:28px;
   }
+  /* HIDE VIDEO */
+
+.player{
+  position:fixed;
+
+  width:0;
+  height:0;
+
+  overflow:hidden;
+
+  opacity:0;
+
+  pointer-events:none;
+}
+
+/* MAIN FIX */
+
+.main{
+  padding-bottom:140px;
+}
+
+/* CARD ANIMATION */
+
+.card{
+  animation:fade .3s ease;
+}
+
+@keyframes fade{
+
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* LOADING */
+
+.loading{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  height:200px;
+
+  font-size:18px;
+
+  color:#1db954;
+
+  animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+
+  0%{
+    opacity:.3;
+  }
+
+  50%{
+    opacity:1;
+  }
+
+  100%{
+    opacity:.3;
+  }
+}
+
+/* HISTORY */
+
+.history{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+
+  margin-bottom:20px;
+}
+
+.history button{
+
+  border:none;
+
+  padding:8px 14px;
+
+  border-radius:20px;
+
+  background:#1db95422;
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.history button:hover{
+
+  background:#1db95455;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  body{
+    height:auto;
+  }
+
+  .main{
+    padding-bottom:160px;
+  }
+
+  .results{
+    gap:15px;
+  }
+
+  .card h3{
+    font-size:14px;
+  }
+
+  .card p{
+    font-size:12px;
+  }
+}
 }
