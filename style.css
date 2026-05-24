@@ -121,6 +121,63 @@ body {
   font-size: 14px;
 }
 
+.mini-player {
+  position: fixed;
+  bottom: 95px;
+  left: 260px;
+
+  width: 320px;
+  height: 80px;
+
+  background: rgba(0,0,0,0.8);
+
+  border: 1px solid #1db95455;
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 10px;
+
+  backdrop-filter: blur(10px);
+
+  z-index: 999;
+}
+
+.mini-player img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.mini-info {
+  flex: 1;
+}
+
+.mini-info h4 {
+  font-size: 14px;
+}
+
+.mini-info p {
+  color: #aaa;
+  font-size: 12px;
+}
+
+#playBtn {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #1db954;
+  color: white;
+
+  cursor: pointer;
+}
+
 .player {
   position: fixed;
   bottom: 0;
