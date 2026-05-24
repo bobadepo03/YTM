@@ -21,8 +21,11 @@ let isPlaying = false;
 
 async function searchMusic(query){
 
-  results.innerHTML =
-    "<p>Loading...</p>";
+  results.innerHTML = `
+<div class="loading">
+  Loading music...
+</div>
+`;
 
   const url =
 `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}%20music&type=video&maxResults=12&key=${API_KEY}`;
@@ -126,6 +129,8 @@ searchBtn.addEventListener("click",()=>{
 
     saveHistory(query);
 
+    renderHistory();
+
     searchMusic(query);
   }
 });
@@ -169,6 +174,50 @@ playBtn.addEventListener("click",()=>{
 
   isPlaying = !isPlaying;
 });
+
+  /* PLAY BUTTON AUTO FIX */
+
+playerFrame.onload = () => {
+
+  playBtn.innerHTML =
+    '<i class="fa-solid fa-pause"></i>';
+
+  isPlaying = true;
+};
+
+/* SHOW HISTORY */
+
+function renderHistory(){
+
+  const historyList =
+    document.getElementById("historyList");
+
+  const history =
+    JSON.parse(
+      localStorage.getItem("history")
+    ) || [];
+
+  historyList.innerHTML = "";
+
+  history.forEach((item)=>{
+
+    const btn =
+      document.createElement("button");
+
+    btn.innerText = item;
+
+    btn.addEventListener("click",()=>{
+
+      searchInput.value = item;
+
+      searchMusic(item);
+    });
+
+    historyList.appendChild(btn);
+  });
+}
+
+renderHistory();
 
 /* DEFAULT SEARCH */
 
