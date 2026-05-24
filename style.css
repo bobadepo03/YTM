@@ -230,4 +230,39 @@ body {
   .hero h2{
     font-size:28px;
   }
+  body {
+  background:
+    radial-gradient(circle at top, #1f1f1f, #000);
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  box-shadow:
+    0 0 10px #1db95433,
+    0 0 20px #1db95411;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+
+  box-shadow:
+    0 0 20px #1db954,
+    0 0 40px #1db95455;
+}
+
+.topbar input {
+  box-shadow: 0 0 10px #1db95433;
+}
+
+.logo {
+  text-shadow:
+    0 0 10px #1db954,
+    0 0 20px #1db954;
+}
 }
