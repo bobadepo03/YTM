@@ -32,8 +32,16 @@ async function searchMusic(query) {
       `;
 
       card.addEventListener("click", () => {
-        playMusic(videoId);
-      });
+
+  playerFrame.src =
+    `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+  document.getElementById("miniThumb").src = thumbnail;
+
+  document.getElementById("miniTitle").innerText = title;
+
+  document.getElementById("miniArtist").innerText = channel;
+});
 
       results.appendChild(card);
     });
