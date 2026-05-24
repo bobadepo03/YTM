@@ -6,7 +6,8 @@
 }
 
 body {
-  background: #121212;
+  background:
+    radial-gradient(circle at top, #1f1f1f, #000);
   color: white;
   display: flex;
   height: 100vh;
@@ -230,10 +231,6 @@ body {
   .hero h2{
     font-size:28px;
   }
-  body {
-  background:
-    radial-gradient(circle at top, #1f1f1f, #000);
-}
 
 .card {
   background: rgba(255,255,255,0.05);
