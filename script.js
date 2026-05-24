@@ -51,6 +51,23 @@ async function searchMusic(query) {
   }
 }
 
+function saveHistory(query) {
+
+  let history =
+    JSON.parse(localStorage.getItem("history")) || [];
+
+  history.unshift(query);
+
+  history = [...new Set(history)];
+
+  history = history.slice(0, 10);
+
+  localStorage.setItem(
+    "history",
+    JSON.stringify(history)
+  );
+}
+
 function playMusic(videoId) {
   playerFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
 }
